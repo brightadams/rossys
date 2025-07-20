@@ -172,7 +172,7 @@ export default function LandingPage() {
                 Just like people now trust strangers through Airbnb and ride-sharing, Group Susu brings that same innovation to community finance.
               </p>
               <p>
-                What seemed risky in the early 2000s is now commonplace - we're making the same transformation for rotating savings.
+                What seemed risky in the early 2000s is now commonplace - we&apos;re making the same transformation for rotating savings.
               </p>
             </div>
           </div>

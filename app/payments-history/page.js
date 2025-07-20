@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { FaSearch, FaMoneyBillWave, FaCheckCircle, FaTimesCircle, FaClock } from 'react-icons/fa';
 import { FiDownload } from 'react-icons/fi';
 import { useSession } from 'next-auth/react';
-import { redirect, useRouter } from "next/navigation";
+import { redirect,  } from "next/navigation";
 
 export default function PaymentHistory() {
   const [payments, setPayments] = useState([]);
@@ -105,7 +105,7 @@ export default function PaymentHistory() {
     return new Date(dateString).toLocaleDateString('en-US', options);
   };
 
-  const { data: session, status } = useSession({
+  const { status } = useSession({
       required: true,
       onUnauthenticated() {
         redirect("/login?callbackUrl=/dashboard");

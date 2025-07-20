@@ -20,7 +20,8 @@ export default function CreateGroup() {
   const totalPot = memberCount * contributionAmount;
   const cycleDuration = memberCount;
 
-  const { data: session, status } = useSession({
+  const { //data: session, 
+          status } = useSession({
       required: true,
       onUnauthenticated() {
         redirect("/login?callbackUrl=/dashboard");

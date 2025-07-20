@@ -33,7 +33,7 @@ export default function MakePayment() {
     alert('Payment processed successfully!');
   };
 
-  const { data: session, status } = useSession({
+  const { status } = useSession({
       required: true,
       onUnauthenticated() {
         redirect("/login?callbackUrl=/dashboard");

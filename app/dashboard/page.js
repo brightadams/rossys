@@ -14,12 +14,13 @@ import { useSession } from "next-auth/react";
 import Link from "next/link"
 
 export default function Dashboard() {
-  const { data: session, status } = useSession({
+      const { //data: session, 
+        status } = useSession({
     required: true,
     onUnauthenticated() {
       redirect("/login?callbackUrl=/dashboard");
     },
-  });
+    });
 
   // Show loading indicator while checking authentication status
   if (status === "loading") {

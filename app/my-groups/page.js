@@ -47,7 +47,7 @@ export default function MyGroups() {
     }
   ];
 
-  const { data: session, status } = useSession({
+  const { status } = useSession({
       required: true,
       onUnauthenticated() {
         redirect("/login?callbackUrl=/dashboard");
@@ -141,7 +141,7 @@ export default function MyGroups() {
           </div>
         ) : (
           <div className="bg-white p-8 rounded-xl text-center">
-            <p className="text-gray-500">You don't have any active groups yet</p>
+            <p className="text-gray-500">You dont have any active groups yet</p>
             <button className="mt-4 flex items-center justify-center mx-auto bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">
               <FaPlus className="mr-2" /> Join a Group
             </button>

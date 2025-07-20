@@ -65,7 +65,7 @@ export default function JoinGroupPage() {
     group.description.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  const { data: session, status } = useSession({
+  const { status } = useSession({
       required: true,
       onUnauthenticated() {
         redirect("/login");

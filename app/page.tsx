@@ -3,7 +3,6 @@ import Link from "next/link";
 import {
   FaShieldAlt,
   FaUsers,
-  FaPiggyBank,
   FaGlobe,
   FaHandHoldingUsd,
   FaSyncAlt,
@@ -228,8 +227,8 @@ export default function LandingPage() {
                 community finance.
               </p>
               <p>
-                What seemed risky in the early 2000s is now commonplace - we're
-                making the same transformation for rotating savings.
+                What seemed risky in the early 2000s is now commonplace -
+                we&apos;re making the same transformation for rotating savings.
               </p>
             </div>
           </div>

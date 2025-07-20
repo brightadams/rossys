@@ -37,7 +37,7 @@ export default function VerificationPage() {
               </div>
 
               <div className="border-t border-gray-200 pt-6">
-                <h3 className="font-semibold text-lg text-gray-800 mb-4">You'll need to provide:</h3>
+                <h3 className="font-semibold text-lg text-gray-800 mb-4">You&apos;ll need to provide:</h3>
                 
                 <div className="space-y-6">
                   <div className="flex items-start">
@@ -61,7 +61,7 @@ export default function VerificationPage() {
                     <div>
                       <h4 className="font-medium text-gray-800">Government-issued ID</h4>
                       <ul className="list-disc list-inside text-gray-600 text-sm mt-1 space-y-1">
-                        <li>Driver's license, passport, or state/provincial ID</li>
+                        <li>Driver&apos;s license, passport, or state/provincial ID</li>
                         <li>All four corners should be visible</li>
                         <li>Information must be clear and readable</li>
                         <li>ID must be valid and not expired</li>

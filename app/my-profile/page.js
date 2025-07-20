@@ -1,12 +1,12 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { FaCheckCircle, FaTimesCircle, FaUser, FaEnvelope, FaPhone, FaIdCard, FaArrowRight } from 'react-icons/fa';
+import { FaCheckCircle, FaTimesCircle, FaUser, FaEnvelope, FaPhone, FaIdCard, FaArrowRight, FaClock } from 'react-icons/fa';
 import { useSession } from 'next-auth/react';
 import { redirect, useRouter } from "next/navigation";
 
 export default function ProfilePage() {
-  const { data: session, status, update } = useSession({
+  const { status, } = useSession({
     required: true,
     onUnauthenticated() {
       redirect("/login?callbackUrl=/dashboard");
