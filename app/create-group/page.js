@@ -8,7 +8,7 @@ import {
   FaShareAlt,
 } from 'react-icons/fa';
 import { useSession } from 'next-auth/react';
-import { redirect, useRouter } from "next/navigation";
+import { redirect } from "next/navigation";
 
 export default function CreateGroup() {
   const [groupName, setGroupName] = useState('Team 7 Circle');

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { FaFilter, FaSearch, FaMoneyBillWave, FaCheckCircle, FaTimesCircle, FaClock } from 'react-icons/fa';
+import { FaSearch, FaMoneyBillWave, FaCheckCircle, FaTimesCircle, FaClock } from 'react-icons/fa';
 import { FiDownload } from 'react-icons/fi';
 import { useSession } from 'next-auth/react';
 import { redirect, useRouter } from "next/navigation";

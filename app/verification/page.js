@@ -1,7 +1,7 @@
 'use client';
 
 import { FaCamera, FaIdCard, FaCheckCircle, FaArrowRight } from 'react-icons/fa';
-import { redirect, useRouter } from "next/navigation";
+import {useRouter } from "next/navigation";
 
 export default function VerificationPage() {
   const router = useRouter();

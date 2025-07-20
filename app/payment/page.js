@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { FaCreditCard, FaPaypal, FaMobileAlt, FaCheckCircle } from 'react-icons/fa';
 import { useSession } from 'next-auth/react';
-import { redirect, useRouter } from "next/navigation";
+import { redirect, } from "next/navigation";
 
 export default function MakePayment() {
   const [paymentMethod, setPaymentMethod] = useState('card');

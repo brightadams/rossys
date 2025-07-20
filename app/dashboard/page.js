@@ -9,7 +9,7 @@ import {
   FaPlus,
   FaChevronRight,
 } from 'react-icons/fa';
-import { redirect, useRouter } from "next/navigation";
+import { redirect, } from "next/navigation";
 import { useSession } from "next-auth/react";
 import Link from "next/link"
 

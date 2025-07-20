@@ -1,8 +1,8 @@
 "use client"
-import { FaUsers, FaMoneyBillWave, FaCalendarAlt, FaPlus, FaSearch } from 'react-icons/fa';
+import { FaUsers, FaPlus, FaSearch } from 'react-icons/fa';
 import { IoIosArrowForward } from 'react-icons/io';
 import { useSession } from "next-auth/react";
-import { redirect, useRouter } from "next/navigation";
+import { redirect,  } from "next/navigation";
 import Link from "next/link"
 
 export default function MyGroups() {

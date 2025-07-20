@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import { FaShieldAlt, FaUsers, FaPiggyBank, FaGlobe, FaHandHoldingUsd, FaSyncAlt, FaCheckCircle } from 'react-icons/fa';
+import { FaShieldAlt, FaUsers, FaGlobe, FaHandHoldingUsd, FaSyncAlt, FaCheckCircle } from 'react-icons/fa';
 
 export default function LandingPage() {
   return (
