@@ -6,7 +6,7 @@ import { useSession } from 'next-auth/react';
 import { redirect, useRouter } from "next/navigation";
 
 export default function ProfilePage() {
-  const { status, } = useSession({
+  const { session,status, } = useSession({
     required: true,
     onUnauthenticated() {
       redirect("/login?callbackUrl=/dashboard");
