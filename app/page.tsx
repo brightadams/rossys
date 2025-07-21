@@ -13,7 +13,7 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-blue-100">
       <Head>
-        <title>Group Susu - Secure Digital Rotating Savings</title>
+        <title>RoSSyS - Secure Digital Rotating Savings</title>
         <meta
           name="description"
           content="Modern protection for traditional susu savings groups"
@@ -26,7 +26,7 @@ export default function LandingPage() {
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-2">
             <FaShieldAlt className="h-6 w-6" />
-            <span className="text-xl font-bold">Group Susu</span>
+            <span className="text-xl font-bold">RoSSys</span>
           </div>
           <Link
             href="/dashboard"
@@ -67,7 +67,7 @@ export default function LandingPage() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-blue-900 mb-12">
-            Why Choose Group Susu?
+            Why Choose RoSSys?
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -161,7 +161,7 @@ export default function LandingPage() {
       <section id="how-it-works" className="py-16 bg-blue-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-blue-900 mb-12">
-            How Group Susu Works
+            How RoSSys Works
           </h2>
 
           <div className="flex flex-col lg:flex-row items-center gap-8">
@@ -259,11 +259,11 @@ export default function LandingPage() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center mb-4 md:mb-0">
               <FaShieldAlt className="h-6 w-6 mr-2" />
-              <span className="text-xl font-bold">Group Susu</span>
+              <span className="text-xl font-bold">RoSSys</span>
             </div>
             <div className="text-center md:text-right">
               <p className="text-blue-300">
-                © {new Date().getFullYear()} Group Susu. All rights reserved.
+                © {new Date().getFullYear()} RoSSys. All rights reserved.
               </p>
             </div>
           </div>
