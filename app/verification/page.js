@@ -14,13 +14,13 @@ export default function VerificationPage() {
     });
     console.log(session)
   const router = useRouter();
-  const [isLoading, setIsLoading] = useState(false);
+  //const [isLoading, setIsLoading] = useState(false);
 
   const handleStartVerification = async () => {
-    setIsLoading(true);
+    //setIsLoading(true);
     try {
       // Call the verification API endpoint
-      const response = await fetch('/api/users/verify', {
+      await fetch('/api/users/verify', {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
@@ -40,7 +40,7 @@ export default function VerificationPage() {
       console.error('Verification error:', error);
       alert('Verification failed. Please try again.');
     } finally {
-      setIsLoading(false);
+      //setIsLoading(false);
     }
   };
 
