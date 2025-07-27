@@ -138,25 +138,33 @@ export default function CreateGroup() {
           {/* Right Column - Summary and Info */}
           <div className="space-y-6">
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h2 className="text-xl font-semibold mb-4 flex items-center text-slate-900">
-                <FaMoneyBillWave className="text-blue-500 mr-2 " /> Group Summary
-              </h2>
-              
-              <div className="space-y-3">
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Total pot per cycle:</span>
-                  <span className="font-medium text-slate-900">${totalPot.toFixed(2)}</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Each member contributes:</span>
-                  <span className="font-medium text-slate-900">${contributionAmount} {paymentFrequency}</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Complete cycle duration:</span>
-                  <span className="font-medium text-slate-900">{cycleDuration} {paymentFrequency} periods</span>
-                </div>
-              </div>
-            </div>
+  <h2 className="text-xl font-semibold mb-4 flex items-center text-slate-900">
+    <FaMoneyBillWave className="text-blue-500 mr-2 " /> Group Summary
+  </h2>
+  
+  <div className="space-y-3">
+    <div className="flex justify-between">
+      <span className="text-gray-600">Total pot per cycle:</span>
+      <span className="font-medium text-slate-900">${totalPot.toFixed(2)}</span>
+    </div>
+    <div className="flex justify-between">
+      <span className="text-gray-600">Service charges:</span>
+      <span className="font-medium text-slate-900">$5.00</span>
+    </div>
+    <div className="flex justify-between border-b border-gray-200 pb-2">
+      <span className="text-gray-600">Net payout per cycle:</span>
+      <span className="font-medium text-slate-900">${(totalPot - 5).toFixed(2)}</span>
+    </div>
+    <div className="flex justify-between pt-2">
+      <span className="text-gray-600">Each member contributes:</span>
+      <span className="font-medium text-slate-900">${contributionAmount} {paymentFrequency}</span>
+    </div>
+    <div className="flex justify-between">
+      <span className="text-gray-600">Complete cycle duration:</span>
+      <span className="font-medium text-slate-900">{cycleDuration} {paymentFrequency} periods</span>
+    </div>
+  </div>
+</div>
 
             <div className="bg-blue-50 p-6 rounded-lg">
               <h2 className="text-xl font-semibold mb-4 flex items-center text-slate-900">

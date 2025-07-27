@@ -1,16 +1,59 @@
 'use client';
 
+import { useState } from 'react';
+import { useSession } from 'next-auth/react';
 import { FaCamera, FaIdCard, FaCheckCircle, FaArrowRight } from 'react-icons/fa';
 import {useRouter } from "next/navigation";
 
 export default function VerificationPage() {
+  const { data: session,status, } = useSession({
+      required: true,
+      onUnauthenticated() {
+        redirect("/login?callbackUrl=/dashboard");
+      },
+    });
+    console.log(session)
   const router = useRouter();
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleStartVerification = () => {
-    // Here you would typically integrate with your verification service
-    // For now, we'll just simulate starting the process
-    router.push('/verification/upload');
+  const handleStartVerification = async () => {
+    setIsLoading(true);
+    try {
+      // Call the verification API endpoint
+      const response = await fetch('/api/users/verify', {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: session.user.email // Replace with actual user email or get from session
+        }),
+      });
+
+      // if (!response.ok) {
+      //   throw new Error('Verification failed');
+      // }
+
+      // Redirect to success page after successful verification
+      router.push('/verification-complete');
+    } catch (error) {
+      console.error('Verification error:', error);
+      alert('Verification failed. Please try again.');
+    } finally {
+      setIsLoading(false);
+    }
   };
+
+   if (status === "loading") {
+      return (
+        <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500 mx-auto"></div>
+            <p className="mt-4 text-gray-600">Checking authentication...</p>
+          </div>
+        </div>
+      );
+    }
 
   return (
     <div className="min-h-screen bg-gray-50 p-6">

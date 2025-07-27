@@ -6,7 +6,7 @@ import { useSession } from 'next-auth/react';
 import { redirect, useRouter } from "next/navigation";
 
 export default function ProfilePage() {
-  const { session,status, } = useSession({
+  const { data: session,status, } = useSession({
     required: true,
     onUnauthenticated() {
       redirect("/login?callbackUrl=/dashboard");
@@ -26,11 +26,11 @@ export default function ProfilePage() {
         
         // Mock data - in a real app, you would fetch this from your backend
         const mockUser = {
-          name: session?.user?.name || 'John Doe',
-          email: session?.user?.email || 'john@example.com',
+          name: session?.user?.name || 'Nana Yaw',
+          email: session?.user?.email || 'nanayaw@gmail.com',
           phone: '+1234567890',
-          isVerified: false, // This would come from your backend
-          verificationStatus: 'unverified', // unverified, pending, verified
+          isVerified: session?.user?.verified, // This would come from your backend
+          verificationStatus: session?.user?.verified, // unverified, pending, verified
           idType: 'Passport', // Could be null if not submitted
           idNumber: 'AB1234567', // Could be null if not submitted
           joinedDate: '2023-10-15T08:30:00Z'
@@ -55,6 +55,7 @@ export default function ProfilePage() {
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
     return new Date(dateString).toLocaleDateString('en-US', options);
   };
+
   
     // Show loading indicator while checking authentication status
     if (status === "loading") {

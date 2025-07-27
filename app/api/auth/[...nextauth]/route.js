@@ -18,6 +18,7 @@ const handler = NextAuth({
             })
 
             session.user.id = sessionUser._id.toString();
+            session.user.verified  = sessionUser.verified;
 
             return session;
         },
@@ -35,10 +36,16 @@ const handler = NextAuth({
                 await User.create({
                     email: profile.email,
                     username: profile.name.replace(" ","").toLowerCase(),
-                    image: profile.picture
+                    image: profile.picture,
+                    verified: false
                 })
             }
-            return true
+            return {
+                    email: profile.email,
+                    username: profile.name.replace(" ","").toLowerCase(),
+                    image: profile.picture,
+                    verified: false
+                }
         } catch (error) {
             console.log(error);
             return false;

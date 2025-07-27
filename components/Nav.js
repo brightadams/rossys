@@ -10,12 +10,16 @@ import {
     FaSearch,
     FaUser,
     FaCheckCircle,
-    FaSignOutAlt
+    FaSignOutAlt,
+    
 } from 'react-icons/fa';
+import { useSession } from 'next-auth/react';
 import {signOut} from 'next-auth/react'
 
 export default function Nav() {
+  const { data: session } = useSession();
   const [isProfileOpen, setIsProfileOpen] = useState(false);
+  console.log(session)
 
   return (
     <nav className="bg-white shadow-sm">
@@ -66,9 +70,10 @@ export default function Nav() {
                     alt="User profile" 
                   />
                 </div>
-                <div className="ml-2">
-                  <p className="text-sm font-medium text-gray-700">John Doe</p>
-                </div>
+                <div className="ml-2 flex items-center">
+                <p className="text-sm font-medium text-gray-700">{session?.user?.name}</p>
+                { session?.user?.verified && <FaCheckCircle className="ml-1 text-blue-500" size={14} />}
+              </div>
               </div>
 
               {/* Dropdown menu */}
