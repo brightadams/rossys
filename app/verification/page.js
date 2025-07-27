@@ -1,6 +1,5 @@
 'use client';
 
-import { useState } from 'react';
 import { useSession } from 'next-auth/react';
 import { FaCamera, FaIdCard, FaCheckCircle, FaArrowRight } from 'react-icons/fa';
 import {useRouter } from "next/navigation";
