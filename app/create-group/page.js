@@ -11,7 +11,7 @@ import { useSession } from 'next-auth/react';
 import { redirect } from "next/navigation";
 
 export default function CreateGroup() {
-  const [groupName, setGroupName] = useState('Team 7 Circle');
+  const [groupName, setGroupName] = useState('');
   const [memberCount, setMemberCount] = useState(3);
   const [contributionAmount, setContributionAmount] = useState(100);
   const [paymentFrequency, setPaymentFrequency] = useState('bi-weekly');
@@ -62,6 +62,7 @@ export default function CreateGroup() {
                   <label className="block text-sm font-medium text-gray-700 mb-1">Group Name</label>
                   <input
                     type="text"
+                    placeholder="Enter Group Name"
                     value={groupName}
                     onChange={(e) => setGroupName(e.target.value)}
                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 text-slate-900"
@@ -73,7 +74,7 @@ export default function CreateGroup() {
                   <input
                     type="number"
                     min="2"
-                    max="10"
+                    max="12"
                     value={memberCount}
                     onChange={(e) => setMemberCount(parseInt(e.target.value))}
                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 text-slate-900"
